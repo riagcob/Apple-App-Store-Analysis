@@ -15,6 +15,9 @@ library(mgcv)
 library(caret)
 library(e1071)
 library(MASS)
+library(stats)
+library(factoextra)
+library(cluster)
 
 apple = read.csv("C:/Users/Ria/Downloads/appleAppData.csv", sep = ",")
 sum(is.na(apple))
@@ -217,9 +220,6 @@ scatterplotMatrix(~ reviews +price, data = logsample)
 
 
 #PCA
-library(stats)
-library(factoextra)
-library(cluster)
 
 # Standardize the data
 data_std = scale(nums)
